@@ -1,0 +1,615 @@
+/* ============================================================================
+   CUSTOM OMBI THEME - Standalone (No Base Import)
+   Purple/Blue Dark Theme for Ombi 4.53.0
+   
+   This version doesn't import any base theme and uses highly specific
+   selectors to ensure overrides work with reverse proxy setups.
+   ============================================================================ */
+
+/* ============================================================================
+   GLOBAL RESETS AND BASE STYLES
+   ============================================================================ */
+
+/* Force background colors on all main containers */
+html,
+html body,
+html body app-root,
+html body app-root > *,
+body,
+app-root {
+    background-color: #0f0f1e !important;
+    background-image: none !important;
+    color: #e8eaed !important;
+}
+
+/* Material drawer system - main container */
+html body .mat-drawer-container,
+html body mat-drawer-container,
+html body .mat-sidenav-container,
+html body mat-sidenav-container,
+.mat-drawer-container.mat-drawer-container,
+mat-drawer-container.mat-drawer-container {
+    background-color: #0f0f1e !important;
+    background-image: none !important;
+    color: #e8eaed !important;
+}
+
+/* Material drawer content area */
+html body .mat-drawer-content,
+html body mat-drawer-content,
+html body .mat-sidenav-content,
+.mat-drawer-content.mat-drawer-content,
+mat-drawer-content.mat-drawer-content {
+    background-color: #0f0f1e !important;
+    background-image: none !important;
+}
+
+/* Sidebar/Drawer itself */
+html body .mat-drawer,
+html body mat-drawer,
+html body .mat-sidenav,
+html body mat-sidenav,
+.mat-drawer.mat-drawer,
+mat-drawer.mat-drawer,
+.mat-drawer-inner-container {
+    background-color: #13131f !important;
+    background-image: none !important;
+}
+
+/* ============================================================================
+   NAVIGATION BAR
+   ============================================================================ */
+
+html body .mat-toolbar,
+html body mat-toolbar,
+html body .mat-toolbar.mat-primary,
+html body mat-toolbar.mat-primary,
+html body header.mat-toolbar,
+html body app-nav .mat-toolbar,
+html body app-nav mat-toolbar,
+.mat-toolbar.mat-toolbar,
+mat-toolbar.mat-toolbar,
+nav.mat-toolbar {
+    background: linear-gradient(90deg, #16162a 0%, #1a1a2e 100%) !important;
+    background-color: #16162a !important;
+    background-image: linear-gradient(90deg, #16162a 0%, #1a1a2e 100%) !important;
+    color: #e8eaed !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Toolbar text and icons */
+html body .mat-toolbar *,
+html body mat-toolbar * {
+    color: #e8eaed !important;
+}
+
+/* ============================================================================
+   CARDS AND PANELS
+   ============================================================================ */
+
+html body .mat-card,
+html body mat-card,
+html body .mat-mdc-card,
+html body .card,
+.mat-card.mat-card,
+mat-card.mat-card {
+    background-color: #1a1a2e !important;
+    background-image: none !important;
+    border: 1px solid #2d2d44 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+    border-radius: 8px !important;
+    color: #e8eaed !important;
+}
+
+html body .mat-card:hover,
+html body mat-card:hover {
+    border-color: #667eea !important;
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.3) !important;
+    transform: translateY(-2px) !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Card headers */
+html body .mat-card-header,
+html body mat-card-header,
+html body .mat-card-title,
+.mat-card-header.mat-card-header {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    color: #e8eaed !important;
+}
+
+/* Card content */
+html body .mat-card-content,
+html body mat-card-content,
+html body .mat-card-content *,
+.mat-card-content * {
+    color: #e8eaed !important;
+}
+
+/* Expansion panels */
+html body .mat-expansion-panel,
+html body mat-expansion-panel,
+.mat-expansion-panel.mat-expansion-panel {
+    background-color: #1a1a2e !important;
+    border: 1px solid #2d2d44 !important;
+}
+
+html body .mat-expansion-panel-header {
+    background-color: #1a1a2e !important;
+    color: #e8eaed !important;
+}
+
+html body .mat-expansion-panel-body {
+    background-color: #13131f !important;
+    color: #e8eaed !important;
+}
+
+/* ============================================================================
+   BUTTONS
+   ============================================================================ */
+
+/* Primary buttons - Purple gradient */
+html body .mat-raised-button.mat-primary,
+html body .mat-flat-button.mat-primary,
+html body .mat-fab.mat-primary,
+html body .mat-mini-fab.mat-primary,
+html body button.mat-primary,
+html body .mat-mdc-raised-button.mat-primary,
+.mat-raised-button.mat-primary.mat-primary,
+.mat-flat-button.mat-primary.mat-primary,
+button.mat-primary.mat-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    background-color: #667eea !important;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4) !important;
+}
+
+html body .mat-raised-button.mat-primary:hover,
+html body .mat-flat-button.mat-primary:hover,
+html body button.mat-primary:hover {
+    background: linear-gradient(135deg, #5568d3 0%, #653d8f 100%) !important;
+    background-color: #5568d3 !important;
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.5) !important;
+}
+
+/* Secondary buttons */
+html body .mat-raised-button:not(.mat-primary),
+html body .mat-flat-button:not(.mat-primary),
+html body .mat-stroked-button,
+html body button:not(.mat-primary):not(.mat-icon-button),
+.mat-raised-button.mat-raised-button:not(.mat-primary),
+.mat-flat-button.mat-flat-button:not(.mat-primary) {
+    background-color: #252541 !important;
+    color: #e8eaed !important;
+    border: 1px solid #2d2d44 !important;
+}
+
+html body .mat-raised-button:not(.mat-primary):hover,
+html body .mat-flat-button:not(.mat-primary):hover,
+html body .mat-stroked-button:hover {
+    background-color: #2d2d54 !important;
+    border-color: #667eea !important;
+}
+
+/* Icon buttons */
+html body .mat-icon-button,
+html body button.mat-icon-button {
+    color: #9aa0a6 !important;
+}
+
+html body .mat-icon-button:hover,
+html body button.mat-icon-button:hover {
+    color: #667eea !important;
+    background-color: #252541 !important;
+}
+
+/* Button text */
+html body .mat-button-wrapper {
+    color: inherit !important;
+}
+
+/* ============================================================================
+   FORMS AND INPUTS
+   ============================================================================ */
+
+/* Input fields */
+html body .mat-form-field,
+html body .mat-input-element,
+html body input,
+html body textarea,
+html body .mat-mdc-form-field,
+input.mat-input-element,
+textarea.mat-input-element {
+    color: #e8eaed !important;
+    background-color: #1a1a2e !important;
+}
+
+/* Input field containers */
+html body .mat-form-field-appearance-fill .mat-form-field-flex,
+html body .mat-form-field-appearance-outline .mat-form-field-flex {
+    background-color: #1a1a2e !important;
+}
+
+/* Input borders */
+html body .mat-form-field-outline,
+html body .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #2d2d44 !important;
+}
+
+html body .mat-form-field.mat-focused .mat-form-field-outline,
+html body .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #667eea !important;
+}
+
+/* Labels */
+html body .mat-form-field-label,
+html body .mat-label,
+html body label {
+    color: #9aa0a6 !important;
+}
+
+html body .mat-focused .mat-form-field-label {
+    color: #667eea !important;
+}
+
+/* Placeholders */
+html body input::placeholder,
+html body textarea::placeholder,
+html body .mat-input-element::placeholder {
+    color: #5f6368 !important;
+}
+
+/* ============================================================================
+   SELECT DROPDOWNS
+   ============================================================================ */
+
+html body .mat-select,
+html body .mat-select-value,
+html body .mat-select-panel {
+    background-color: #1a1a2e !important;
+    color: #e8eaed !important;
+}
+
+html body .mat-option,
+html body .mat-mdc-option {
+    background-color: #1a1a2e !important;
+    color: #e8eaed !important;
+}
+
+html body .mat-option:hover,
+html body .mat-option.mat-selected,
+html body .mat-mdc-option:hover {
+    background-color: #252541 !important;
+    color: #667eea !important;
+}
+
+html body .mat-select-arrow {
+    color: #9aa0a6 !important;
+}
+
+/* ============================================================================
+   TABLES
+   ============================================================================ */
+
+html body .mat-table,
+html body table,
+html body .mat-mdc-table {
+    background-color: #1a1a2e !important;
+    border-radius: 8px !important;
+    color: #e8eaed !important;
+}
+
+html body .mat-header-row,
+html body thead tr {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+html body .mat-header-cell,
+html body th {
+    color: #e8eaed !important;
+    font-weight: 600 !important;
+    border-bottom: 2px solid #2d2d44 !important;
+}
+
+html body .mat-cell,
+html body td {
+    color: #e8eaed !important;
+    border-bottom: 1px solid #2d2d44 !important;
+}
+
+html body .mat-row:hover,
+html body tbody tr:hover {
+    background-color: #252541 !important;
+}
+
+/* ============================================================================
+   TABS
+   ============================================================================ */
+
+html body .mat-tab-label,
+html body .mat-mdc-tab {
+    color: #9aa0a6 !important;
+}
+
+html body .mat-tab-label:hover,
+html body .mat-mdc-tab:hover {
+    background-color: #252541 !important;
+    color: #e8eaed !important;
+}
+
+html body .mat-tab-label.mat-tab-label-active,
+html body .mat-mdc-tab.mdc-tab--active {
+    color: #667eea !important;
+}
+
+html body .mat-ink-bar,
+html body .mat-mdc-tab-indicator .mdc-tab-indicator__content {
+    background-color: #667eea !important;
+    height: 3px !important;
+}
+
+html body .mat-tab-group,
+html body .mat-tab-body-content {
+    background-color: transparent !important;
+}
+
+/* ============================================================================
+   DIALOGS AND MODALS
+   ============================================================================ */
+
+html body .mat-dialog-container,
+html body .mat-mdc-dialog-container,
+.mat-dialog-container.mat-dialog-container {
+    background-color: #1a1a2e !important;
+    color: #e8eaed !important;
+    border: 1px solid #2d2d44 !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6) !important;
+}
+
+html body .mat-dialog-title {
+    color: #e8eaed !important;
+    border-bottom: 1px solid #2d2d44 !important;
+}
+
+html body .mat-dialog-content {
+    color: #e8eaed !important;
+}
+
+/* ============================================================================
+   MENUS
+   ============================================================================ */
+
+html body .mat-menu-panel,
+html body .mat-mdc-menu-panel,
+.mat-menu-panel.mat-menu-panel {
+    background-color: #1a1a2e !important;
+    border: 1px solid #2d2d44 !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+}
+
+html body .mat-menu-item,
+html body .mat-mdc-menu-item {
+    color: #e8eaed !important;
+}
+
+html body .mat-menu-item:hover,
+html body .mat-mdc-menu-item:hover {
+    background-color: #252541 !important;
+    color: #667eea !important;
+}
+
+/* ============================================================================
+   LISTS AND NAVIGATION
+   ============================================================================ */
+
+html body .mat-list-item,
+html body .mat-nav-list .mat-list-item {
+    color: #9aa0a6 !important;
+}
+
+html body .mat-list-item:hover,
+html body .mat-nav-list .mat-list-item:hover {
+    background-color: #252541 !important;
+    color: #e8eaed !important;
+}
+
+html body .mat-list-item.active,
+html body .mat-nav-list .mat-list-item.active {
+    background-color: #252541 !important;
+    color: #667eea !important;
+    border-left: 3px solid #667eea !important;
+}
+
+/* ============================================================================
+   CHIPS AND BADGES
+   ============================================================================ */
+
+html body .mat-chip,
+html body .mat-standard-chip,
+html body .mat-mdc-chip,
+html body .badge {
+    background-color: #252541 !important;
+    color: #e8eaed !important;
+    border: 1px solid #2d2d44 !important;
+}
+
+html body .mat-chip.mat-chip-selected {
+    background-color: #667eea !important;
+    color: white !important;
+}
+
+/* ============================================================================
+   PROGRESS INDICATORS
+   ============================================================================ */
+
+html body .mat-progress-bar-fill::after {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+html body .mat-progress-bar-buffer {
+    background-color: #252541 !important;
+}
+
+html body .mat-progress-spinner circle,
+html body .mat-spinner circle {
+    stroke: #667eea !important;
+}
+
+/* ============================================================================
+   TOOLTIPS AND SNACKBARS
+   ============================================================================ */
+
+html body .mat-tooltip,
+html body .mat-mdc-tooltip {
+    background-color: #1a1a2e !important;
+    color: #e8eaed !important;
+    border: 1px solid #2d2d44 !important;
+}
+
+html body .mat-snack-bar-container,
+html body .mat-mdc-snack-bar-container {
+    background-color: #1a1a2e !important;
+    color: #e8eaed !important;
+    border: 1px solid #2d2d44 !important;
+}
+
+/* ============================================================================
+   LINKS
+   ============================================================================ */
+
+html body a,
+a {
+    color: #667eea !important;
+    text-decoration: none !important;
+}
+
+html body a:hover,
+a:hover {
+    color: #5568d3 !important;
+    text-decoration: underline !important;
+}
+
+/* ============================================================================
+   SCROLLBARS
+   ============================================================================ */
+
+html body ::-webkit-scrollbar,
+::-webkit-scrollbar {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+html body ::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+    background-color: #0f0f1e !important;
+}
+
+html body ::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+    background-color: #2d2d44 !important;
+    border-radius: 6px !important;
+    border: 2px solid #0f0f1e !important;
+}
+
+html body ::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:hover {
+    background-color: #667eea !important;
+}
+
+/* Firefox scrollbars */
+html body *,
+* {
+    scrollbar-width: thin !important;
+    scrollbar-color: #2d2d44 #0f0f1e !important;
+}
+
+/* ============================================================================
+   ICONS
+   ============================================================================ */
+
+html body .mat-icon,
+html body mat-icon {
+    color: #9aa0a6 !important;
+}
+
+html body .mat-icon.mat-primary {
+    color: #667eea !important;
+}
+
+/* ============================================================================
+   DIVIDERS
+   ============================================================================ */
+
+html body .mat-divider,
+html body hr {
+    border-color: #2d2d44 !important;
+}
+
+/* ============================================================================
+   CHECKBOXES AND RADIO BUTTONS
+   ============================================================================ */
+
+html body .mat-checkbox-frame {
+    border-color: #2d2d44 !important;
+}
+
+html body .mat-checkbox-checked .mat-checkbox-background {
+    background-color: #667eea !important;
+}
+
+html body .mat-radio-outer-circle {
+    border-color: #2d2d44 !important;
+}
+
+html body .mat-radio-checked .mat-radio-outer-circle {
+    border-color: #667eea !important;
+}
+
+html body .mat-radio-checked .mat-radio-inner-circle {
+    background-color: #667eea !important;
+}
+
+/* ============================================================================
+   SLIDERS
+   ============================================================================ */
+
+html body .mat-slider-track-fill {
+    background-color: #667eea !important;
+}
+
+html body .mat-slider-thumb {
+    background-color: #667eea !important;
+}
+
+/* ============================================================================
+   PAGINATOR
+   ============================================================================ */
+
+html body .mat-paginator,
+html body .mat-mdc-paginator {
+    background-color: #1a1a2e !important;
+    color: #e8eaed !important;
+}
+
+/* ============================================================================
+   TEXT COLORS (GLOBAL OVERRIDE)
+   ============================================================================ */
+
+html body p,
+html body span,
+html body div,
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6,
+html body label {
+    color: #e8eaed !important;
+}
+
+/* ============================================================================
+   END OF THEME
+   ============================================================================ */
